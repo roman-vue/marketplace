@@ -18,7 +18,7 @@ async function bootstrap() {
     new ResponseInterceptor(),
     new TimeoutInterceptor(),
   );
-  const prefix = `api/v1/${process.env.SERVICE}`;
+  const prefix = `api/v1/market`;
   app.useGlobalFilters(new AllExceptionFilter(logger));
   app.useGlobalPipes(new ValidationPipe());
   app.enableCors();

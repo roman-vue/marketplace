@@ -1,5 +1,4 @@
-import { TypeProfile } from "src/utils/enums/type-profile.enum";
-import { BaseEntity, Column, Entity, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn, Unique } from "typeorm";
 import { ShoopingCart } from "../shooping_cart";
 import { Products } from "../products";
 
@@ -11,7 +10,7 @@ export class Users extends BaseEntity{
     @Column('varchar')
     name: string
 
-    @Column('varchar')
+    @Column('varchar', {unique:true})
     email: string
 
     @Column('varchar')
@@ -19,9 +18,6 @@ export class Users extends BaseEntity{
 
     @Column('boolean')
     status:boolean
-
-    @Column('varchar')
-    type:TypeProfile
 
     @OneToMany(type=> ShoopingCart, value=> value.users)
     shooping_cart: ShoopingCart[]
