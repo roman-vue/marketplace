@@ -21,6 +21,9 @@ export const databaseProvider = TypeOrmModule.forRootAsync({
             cache: {
                 duration: 1700,
             },
+            ssl:{
+                rejectUnauthorized:false
+            }
         };
 
     },
