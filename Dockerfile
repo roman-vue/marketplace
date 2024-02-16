@@ -1,25 +1,25 @@
-FROM node:12 as builder
+FROM node:14-alpine3.13 AS builder
 
-WORKDIR /source/build
+WORKDIR /usr/src/app
 
-COPY src ./src
+COPY package.json ./
 
-COPY *.json ./
+RUN npm i 
 
-RUN ["npm","i"]
+COPY . .
 
-RUN ["npm","run","build"]
+RUN npm run build
 
-FROM node:12-alpine as runner
+FROM node:14-alpine3.13
 
-WORKDIR /source/runner
+WORKDIR /usr/src/app
 
-COPY --from=builder /source/build/node_modules ./node_modules
+COPY --from=builder /usr/src/app/node_modules ./node_modules
 
-COPY --from=builder /source/build/dist ./dist
+COPY --from=builder /usr/src/app/*.json ./
 
-COPY --from=builder /source/build/*.json ./
+COPY --from=builder /usr/src/app/dist ./dist
 
 EXPOSE 3000
 
-CMD ["npm","run","start:prod"]
+CMD npm start
