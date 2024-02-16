@@ -19,7 +19,7 @@ export class Users extends BaseEntity{
     @Column('boolean')
     status:boolean
 
-    @OneToMany(type=> ShoopingCart, value=> value.users)
+    @OneToMany(type=> ShoopingCart, value=> value.user)
     shooping_cart: ShoopingCart[]
 
     @OneToMany(type=> Products, value=> value.user)

@@ -20,7 +20,7 @@ export class Products extends BaseEntity{
     @Column('int')
     stock:number
 
-    @OneToMany(type=> ShoopingCart, value=> value.products)
+    @OneToMany(type=> ShoopingCart, value=> value.product)
     shooping_cart:ShoopingCart
 
     @ManyToOne(type=> Users, value=> value.products)

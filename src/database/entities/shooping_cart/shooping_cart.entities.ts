@@ -5,11 +5,11 @@ import { Users } from "../users";
 @Entity('shooping_cart')
 export class ShoopingCart extends BaseEntity{
     @PrimaryGeneratedColumn('uuid')
-    id:string
+    id: string;
 
-    @ManyToOne(type=>  Products, value=> value.shooping_cart)
-    products: Products[]
+    @ManyToOne(type => Products, product => product.shooping_cart)
+    product: Products;
 
-    @ManyToOne(type => Users , value=> value.shooping_cart)
-    users: Users[]
+    @ManyToOne(type => Users, user => user.shooping_cart)
+    user: Users;
 }
