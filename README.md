@@ -1,3 +1,42 @@
+##.Env
+```
+JWTACCESS=lIWAsRLnMFPsEM0SRyekGED6z7eNjENsYPRJY51Hlfs
+JWTREFRESH=RgDfWms/hWXUIcpxlr0RlnDyA8WcEa0y9W03Ujzu19oHGh5Vo/bRtvUYwKwakUBJwHXlArQmjQt6rmKUNNvxt4DXxzTTuFsy1QrZnnThEOo
+
+##COMPOSE-LOCAL
+# PGHOST=localhost
+# PGPORT=8083
+# PGUSER=admin
+# PGPASSWORD=123456
+# PGDATABASE=market
+
+##NUBE-TEST
+PGHOST=dpg-cn7e6so21fec73flcir0-a.oregon-postgres.render.com
+PGPORT=5432
+PGUSER=admin
+PGPASSWORD=rzjm49Qrw4Nn1MnwwU5o5zGv4NYLjGXM
+PGDATABASE=market_lqzm
+```
+
+## EJECUCION DEL PROYECTO BASE DE DATOS LOCAL
+
+### DOCKER-COMPOSE 
+- levantamiento de base de datos local
+```
+docker-compose up -d
+```
+
+### EJECUCION NEST
+```
+npm run start:dev
+```
+
+## EJECUCION DEL PROYECTO BASE DE DATOS EN LA NUBE
+```
+npm run start:dev
+```
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
