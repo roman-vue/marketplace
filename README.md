@@ -13,7 +13,8 @@ https://market-api-jhz8.onrender.com/api/v1/market/docs
 - primero ejecutar el endpoind https://market-api-jhz8.onrender.com/api/v1/market/auth/signIn con el usuario de prueba
 - copiar el valor de access y pegarlo en el boton authorize para iniciar sesion y poder usar el resto de endpoints
 
-![Uploading image.png…]()
+![Captura de pantalla 2024-02-16 003852](https://github.com/roman-vue/marketplace/assets/55627800/593100bb-5a98-418a-bbac-2db65438bd69)
+
 
 
 # EJECUCION DEL PROYECTO BASE DE DATOS LOCAL
