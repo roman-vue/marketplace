@@ -1,4 +1,23 @@
-##.Env
+# API TEST 
+```
+https://market-api-jhz8.onrender.com/api/v1/market/docs
+```
+## USUARIO DE PRUEBA
+```
+{
+  "email": "lorena@gmail.com",
+  "password": "string"
+}
+```
+## PRUEBA
+- primero ejecutar el endpoind https://market-api-jhz8.onrender.com/api/v1/market/auth/signIn con el usuario de prueba
+- copiar el valor de access y pegarlo en el boton authorize para iniciar sesion y poder usar el resto de endpoints
+
+![Uploading image.png…]()
+
+
+# EJECUCION DEL PROYECTO BASE DE DATOS LOCAL
+## .Env
 ```
 JWTACCESS=lIWAsRLnMFPsEM0SRyekGED6z7eNjENsYPRJY51Hlfs
 JWTREFRESH=RgDfWms/hWXUIcpxlr0RlnDyA8WcEa0y9W03Ujzu19oHGh5Vo/bRtvUYwKwakUBJwHXlArQmjQt6rmKUNNvxt4DXxzTTuFsy1QrZnnThEOo
@@ -18,7 +37,7 @@ PGPASSWORD=rzjm49Qrw4Nn1MnwwU5o5zGv4NYLjGXM
 PGDATABASE=market_lqzm
 ```
 
-## EJECUCION DEL PROYECTO BASE DE DATOS LOCAL
+
 
 ### DOCKER-COMPOSE 
 - levantamiento de base de datos local
